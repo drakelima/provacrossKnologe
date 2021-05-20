@@ -1,26 +1,15 @@
 ## Cache function
-### O arquivo request.php se encontra em app/Http/Controllers
-### Abra o terminal no projeto e execute os comandos abaixo para instalar as dependencias junto ao redis
+ Abra o terminal no projeto e Instale as dependencias executando o comando abaixo:
+
 ```
-composer install && php require predis/predis
+composer install
 ```
 
-### Execute o comando abaixo caso deseje um debug para verificar a eficácia dos caches nas requisições
-```
-composer require barryvdh/laravel-debugbar --dev
-```
+ Considernado o Redis já configurado na máquina de acordo com as configurações passadas em https://github.com/phpredis/phpredis#class-redis execute o comando abaixo para executar os testes das requisições e observe a diferença em tempo entre as duas primeiras execuções do comando (o primeiro ele grava em cache e o segundo usa o cache).
 
-### Altere a constante para redis no arquivo .env como mostra abaixo
 ```
-CACHE_DRIVER=redis
+./vendor/bin/phpunit requestTest.php
 ```
-
-### No arquivo config/app acrescente a linha correspondente nos 'aliases'
-```
-'Debugbar' => Barryvdh\Debugbar\Facade::class,
-```
-
-### Execute as rotas conforme o arquivo web.php para testar o cache
 
 ## Date Formatting
 ### Abra o arquivo date-format.html no Crome para testar
