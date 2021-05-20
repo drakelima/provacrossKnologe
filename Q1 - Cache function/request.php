@@ -14,8 +14,6 @@ class SimpleJsonRequest
         ];
 
         $url .= ($parameters ? '?' . http_build_query($parameters) : '');
-
-        print_r($_SESSION['redis']->get('keyGet'));
         return file_get_contents($url, false, stream_context_create($opts));
     }
 
