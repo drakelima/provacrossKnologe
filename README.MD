@@ -12,7 +12,7 @@ composer install
 ```
 
 ## Date Formatting
-### Abra o arquivo date-format.html no Crome para testar
+Abra o arquivo date-format.html no Google Crome para testar
 
 ## Apply styles
-### Abra o arquivo component.html para testar
+Abra o arquivo component.html no Google Crome para testar
